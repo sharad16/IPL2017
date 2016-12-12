@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+
+	<title>Indian Premier League</title>
+	<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+<body>
+	<div class="header">
+		<a href="http://localhost/onworking/ipl/index.html">
+			<h2 id="head1">Home</h2></a>
+		<div class="container clearfix">
+		</div>
+	</div>
+	<div class="container">
+
+		<div class="row">
+			<span><h1 class="title" style="margin-top:80px;"><b>Indian Premier League-2017</b></h1></span>
+			<center>
+				<hr style="color:red;max-width:400px;"></hr>
+			</center>
+			<div class="col-md-12 col-sm-11 col-xs-11">
+				<div class="main-content">
+					<div class="all-products page">
+						<ul class="products-list">
+							<script id="products-template" type="x-handlebars-template">​ {{#each this}}
+								<li data-index="{{id}}">
+									<a id="{{id}}" href="#" class="product-photo">
+										<marquee direction="up">
+											<center><img src="{{team_img_url}}" height="130" width="190" alt="planets" alt="{{team_name}}" /></center>
+										</marquee>
+									</a>
+									<h2><a href="#"> <center><b>{{team_name}}</b></center> </a></h2><br>
+									<center> <button style="text-align:center; color:orange;"> Click On Image </button></center>
+								</li>
+								{{/each}}
+							</script>
+						</ul>
+					</div>
+
+					<div class="error page">
+						<h3>Sorry, something went wrong :(</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="playerModal">
+	</div>
+</body>
+
+<script src="js_files/iplconfig.js"></script>
+<script src="js_files/jqevent.js"></script>
+<script src="js_files/iplApp.js"></script>
+<link href="css/header.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+
+</html>	
